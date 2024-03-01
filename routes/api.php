@@ -20,6 +20,8 @@ use App\Http\Controllers\EmployeeController;
 //     return $request->user();
 // });
 
+Route::post('/', [EmployeeController::class, 'batchImport'])->name('employee.batchImport');
+
 Route::get('/employee', [EmployeeController::class, 'index']);
 Route::get('/employee/{id}', [EmployeeController::class, 'show']);
 Route::delete('/employee/{id}', [EmployeeController::class, 'destroy']);
